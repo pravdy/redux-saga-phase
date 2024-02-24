@@ -44,7 +44,7 @@ actions.getSearch.pending({ search: 'hi' })
 // actions.getSearch.rejected()
 // actions.getSearch.clear()
 ```
-retruns:
+Retruns:
 ```typescript
 {
   type: 'objects/sagas/getSearch/pending',
@@ -92,7 +92,7 @@ export const sagas = createSagas<Actions>(actions, {
 or
 {
   type: 'objects/sagas/getSearch/fullfiled',
-  error: Error
+  payload: {}
 }
 ```
 
@@ -122,7 +122,7 @@ export const sagas = createSagas<Actions>(actions, {
   getSearch:{
     pending: {
       effect: (pattern, task) => throttle(1000, pattern, task)
-!!!   controled: false,
+      controled: false, // disabling exception interception and starting the fullfiled phase
       task: function* ({ payload }) {
         try {
           const search:IGetObjectsSearchResponse = yield call(getObjectsSearch, payload);
