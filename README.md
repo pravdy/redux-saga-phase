@@ -8,8 +8,7 @@ Add typed phases to redux actions, use them in redux-saga and get typed, easy-to
 Install my-project with npm
 
 ```bash
-  npm install my-project
-  cd my-project
+  npm install redux-saga-phase
 ```
 
 
