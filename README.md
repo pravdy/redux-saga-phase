@@ -64,7 +64,7 @@ An example of a short usage, this simple option uses the ``takeLeading`` effect 
 
 import { createSagas } from 'redux-saga-phase'
 import { actions, Actions } from './actions'
-import { setters } from './slise';
+import { setters } from './slice';
 import { getObjectsSearch, IGetObjectsSearchResponse } from  'src/api/objects/types';
 
 export const sagas = createSagas<Actions>(actions, {
